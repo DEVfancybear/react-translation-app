@@ -1,13 +1,11 @@
 {
   "name": "react-translate-app",
-  "homepage": "https://devfancybear.github.io/react-translation-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "gh-pages": "^2.2.0",
     "i18next": "^19.4.4",
     "i18next-browser-languagedetector": "^4.1.1",
     "i18next-xhr-backend": "^3.2.2",
@@ -17,8 +15,6 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "PORT=3004 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
