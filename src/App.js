@@ -2,11 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {useTranslation} from 'react-i18next';
+import i18next from 'i18next';
 
 const App = () => {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     const handleChangeLanguages = (language) => {
-        i18n.changeLanguage(language);
+        i18next.changeLanguage(language);
 
     }
     return (
@@ -27,7 +28,7 @@ const App = () => {
             </nav>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <p>{t('my translated text')}</p>
+                <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3>
             </header>
         </div>
     );
