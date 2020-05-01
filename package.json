@@ -1,5 +1,6 @@
 {
   "name": "react-translation-app",
+  "homepage": "https://devfancybear.github.io/react-translation-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
