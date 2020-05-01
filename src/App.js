@@ -1,37 +1,40 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {useTranslation} from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
-const App = () => {
-    const {t} = useTranslation();
-    const handleChangeLanguages = (language) => {
-        i18next.changeLanguage(language);
+const App =() => {
+  const { t } = useTranslation();
 
-    }
-    return (
-        <div className="App">
-            <nav style={{width: '100%', padding: '2rem 0', backgroundColor: 'gray'}}>
-                <button onClick={() => handleChangeLanguages('en')}>
-                    English
-                </button>
-                <button onClick={() => handleChangeLanguages('ko')}>
-                    Korean
-                </button>
-                <button onClick={() => handleChangeLanguages('chi')}>
-                    Chinese
-                </button>
-                <button onClick={() => handleChangeLanguages('vi')}>
-                    Vietnam
-                </button>
-            </nav>
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3>
-            </header>
-        </div>
-    );
+  const handleClick =(lang) => {
+    i18next.changeLanguage(lang)
+  }
+
+  return (
+    <div className="App">
+        <nav style={{ width: '100%', padding: '2rem 0', backgroundColor:'gray' }}>
+          <button onClick={()=>handleClick('en')} >
+            English
+          </button>
+          <button onClick={()=>handleClick('ko')} >
+            Korean
+          </button>
+          <button onClick={()=>handleClick('chi')} >
+            Chinese
+         </button>
+         <button onClick={()=>handleClick('vi')} >
+            Vietnam
+         </button>
+        </nav>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3> 
+          </p>
+        </header>
+    </div>
+  );
 }
 
 export default App;
